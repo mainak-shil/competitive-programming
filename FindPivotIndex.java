@@ -2,10 +2,10 @@
 // https://leetcode.com/problems/find-pivot-index
 public class FindPivotIndex {
     public static void main(String[] args) {
-        int[] numbers = {1, 7, 3, 6, 5, 6};
-//        int[] numbers = {1,2,3};
-//        int[] numbers = {2,1,-1};
-//        int[] numbers = {-1, 1, 2};
+        int[] numbers = { 1, 7, 3, 6, 5, 6 };
+        // int[] numbers = {1,2,3};
+        // int[] numbers = {2,1,-1};
+        // int[] numbers = {-1, 1, 2};
         System.out.println("final - " + pivotIndex(numbers));
     }
 
@@ -16,7 +16,7 @@ public class FindPivotIndex {
         int forwardSum = 0, backwardSum = 0;
         for (int i = 0; i < nums.length; i++) {
             forwardSum = calSum(nums, i + 1, nums.length);
-            if (forwardSum == 0 && i==0) {
+            if (forwardSum == 0 && i == 0) {
                 return i;
             }
             backwardSum = calSum(nums, i - 1, 0);
@@ -41,4 +41,3 @@ public class FindPivotIndex {
         return sum;
     }
 }
-

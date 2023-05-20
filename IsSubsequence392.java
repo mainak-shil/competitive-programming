@@ -1,9 +1,29 @@
+import LinkList.ListNode;
+
 import java.util.Stack;
 /*
  *392. Is Subsequence
  * https://leetcode.com/problems/is-subsequence/submissions/913993802/
  * */
 class IsSubsequence392 {
+
+    public boolean isPalindrome(ListNode head) {
+        ListNode local=head;
+        String originalStr = "";
+        Stack<Integer> intStack = new Stack<>();
+        while(local!=null){
+            intStack.push(local.val);
+            local = local.next;
+        }
+        System.out.println(intStack.peek());
+        while(head!=null){
+            if(intStack.pop()!=head.val){
+                return false;
+            }
+            head = head.next;
+        }
+        return true;
+    }
     static Stack<Character> characterStack;
 
     public static void main(String[] args) {

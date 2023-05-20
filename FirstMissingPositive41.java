@@ -2,13 +2,13 @@ public class FirstMissingPositive41 {
     public static void main(String[] args) {
 //        int[] input = {7, 8, 9, 11, 12};
         int[] input = {1, 2, 0};
-        firstMissingPositive(input);
+//        firstMissingPositive(input);
     }
 
-    public static int firstMissingPositive(int[] nums) {
-
-
-    }
+//    public static int firstMissingPositive(int[] nums) {
+//
+//
+//    }
 
 //    public static int firstMissingPositive(int[] nums) {
 //        int minInt = 1;
@@ -28,4 +28,3 @@ public class FirstMissingPositive41 {
 //    }
 }
 
-100,2,3,1

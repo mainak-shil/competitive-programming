@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+
 /*
 205. Isomorphic Strings
 https://leetcode.com/problems/isomorphic-strings/submissions/913987862/
@@ -9,7 +10,7 @@ https://leetcode.com/problems/isomorphic-strings/submissions/913987862/
 public class IsomorphicStrings205 {
     public static void main(String[] args) {
 
-//        boolean isomorphic = isIsomorphic("badc", "baba");//false
+        // boolean isomorphic = isIsomorphic("badc", "baba");//false
         boolean isomorphic = isIsomorphic("ACAB", "XCXY");
         System.out.println("isomorphic - " + isomorphic);
     }
@@ -28,7 +29,8 @@ public class IsomorphicStrings205 {
         for (int i = 0; i < s.length(); i++) {
             char sAt = s.charAt(i);
             char tAt = t.charAt(i);
-            if ((sChars.contains(s.charAt(i)) && tChars.get(sChars.indexOf(sAt)) != tAt) || (tChars.contains(tAt) && sChars.get(tChars.indexOf(tAt)) != sAt)) {
+            if ((sChars.contains(s.charAt(i)) && tChars.get(sChars.indexOf(sAt)) != tAt)
+                    || (tChars.contains(tAt) && sChars.get(tChars.indexOf(tAt)) != sAt)) {
                 return false;
             } else {
                 sChars.add(sAt);
